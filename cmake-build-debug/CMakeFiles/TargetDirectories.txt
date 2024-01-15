@@ -1,0 +1,3 @@
+C:/Users/loloy/CLionProjects/Ykna/cmake-build-debug/CMakeFiles/Ykna.dir
+C:/Users/loloy/CLionProjects/Ykna/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/loloy/CLionProjects/Ykna/cmake-build-debug/CMakeFiles/rebuild_cache.dir

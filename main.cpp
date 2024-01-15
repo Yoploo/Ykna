@@ -2,7 +2,6 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
-#include <QHBoxLayout>
 #include <QMenuBar>
 #include <QMenu>
 #include <QAction>
@@ -10,7 +9,6 @@
 #include <QTextEdit>
 #include <QFileDialog>
 #include <QFile>
-#include <QStackedWidget>
 
 // Fonction pour créer la barre de menu
 void createMenuBar(QMenuBar &menuBar, QStackedWidget &stackedWidget) {
