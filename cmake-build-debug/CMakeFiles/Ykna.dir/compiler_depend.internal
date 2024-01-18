@@ -35,6 +35,7 @@ CMakeFiles/Ykna.dir/Controller/card.c.obj
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
+ C:/Ykna/Controller/card.h
 
 CMakeFiles/Ykna.dir/Controller/deck.c.obj
  C:/Ykna/Controller/deck.c
@@ -70,6 +71,7 @@ CMakeFiles/Ykna.dir/Controller/deck.c.obj
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
+ C:/Ykna/Controller/deck.h
 
 CMakeFiles/Ykna.dir/View/main.cpp.obj
  C:/Ykna/View/main.cpp
@@ -230,6 +232,8 @@ CMakeFiles/Ykna.dir/View/main.cpp.obj
  C:/Qt/6.6.1/mingw_64/include/QtWidgets/qtwidgetsexports.h
  C:/Qt/6.6.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h
  C:/Qt/6.6.1/mingw_64/include/QtWidgets/qwidget.h
+ C:/Ykna/Controller/card.h
+ C:/Ykna/Controller/deck.h
  C:/Ykna/database/createDatabase.h
  C:/msys64/mingw64/include/_mingw.h
  C:/msys64/mingw64/include/_mingw_mac.h

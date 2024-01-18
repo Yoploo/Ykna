@@ -11,6 +11,8 @@ add_executable(Ykna View/main.cpp
         Controller/deck.c
         Controller/card.c
         Controller/card.c
+        Controller/card.h
+        Controller/deck.h
 )
 
 find_package(PkgConfig REQUIRED)

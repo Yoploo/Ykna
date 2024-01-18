@@ -368,4 +368,5 @@ CMakeFiles/Ykna.dir/View/main.cpp.obj: C:\Ykna\View\main.cpp \
  C:/Qt/6.6.1/mingw_64/include/QtGui/qfontmetrics.h \
  C:/Qt/6.6.1/mingw_64/include/QtGui/qfontinfo.h \
  C:/Qt/6.6.1/mingw_64/include/QtWidgets/qsizepolicy.h \
- C:/Ykna/database/createDatabase.h C:/msys64/mingw64/include/sqlite3.h
+ C:/Ykna/database/createDatabase.h C:/msys64/mingw64/include/sqlite3.h \
+ C:/Ykna/Controller/card.h C:/Ykna/Controller/deck.h

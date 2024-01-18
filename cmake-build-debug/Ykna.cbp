@@ -113,7 +113,13 @@
 		<Unit filename="C:/Ykna/Controller/card.c">
 			<Option target="Ykna"/>
 		</Unit>
+		<Unit filename="C:/Ykna/Controller/card.h">
+			<Option target="Ykna"/>
+		</Unit>
 		<Unit filename="C:/Ykna/Controller/deck.c">
+			<Option target="Ykna"/>
+		</Unit>
+		<Unit filename="C:/Ykna/Controller/deck.h">
 			<Option target="Ykna"/>
 		</Unit>
 		<Unit filename="C:/Ykna/View/main.cpp">

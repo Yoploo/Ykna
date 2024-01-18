@@ -28,4 +28,4 @@ CMakeFiles/Ykna.dir/Controller/deck.c.obj: C:\Ykna\Controller\deck.c \
  C:/msys64/mingw64/include/sqlite3.h \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
  C:/msys64/mingw64/include/stdarg.h \
- C:/msys64/mingw64/include/_mingw_stdarg.h
+ C:/msys64/mingw64/include/_mingw_stdarg.h C:\Ykna\Controller\deck.h

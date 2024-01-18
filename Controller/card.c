@@ -1,11 +1,14 @@
-//
-// Created by Mathéo on 17/01/2024.
-//
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sqlite3.h>
+#include "card.h"
 
-int addCard(sqlite3* db, const char* recto, const char* verso, int rank, int points, int deck_id, int user_id) {
+
+int addCard(sqlite3* db, const struct card *Card);
+int deleteCard(sqlite3* db, const struct card *Card, int card_id);
+
+int addCard(sqlite3* db, const struct card *Card) {
     //partie verif de deck (à refaire)
     const char* checkDeck = "SELECT COUNT(*) FROM decks WHERE deck_id = ? AND user_id = ?";
     sqlite3_stmt* ownerdeckStmt;
@@ -16,8 +19,8 @@ int addCard(sqlite3* db, const char* recto, const char* verso, int rank, int poi
         return ownershipReq; // ou toute autre valeur pour indiquer une erreur
     }
 
-    sqlite3_bind_int(ownerdeckStmt, 1, deck_id);
-    sqlite3_bind_int(ownerdeckStmt, 2, user_id);
+    sqlite3_bind_int(ownerdeckStmt, 1, Card->deck_id);
+    sqlite3_bind_int(ownerdeckStmt, 2, Card->user_id);
 
     ownershipReq = sqlite3_step(ownerdeckStmt);
     if (ownershipReq != SQLITE_ROW) {
@@ -46,12 +49,12 @@ int addCard(sqlite3* db, const char* recto, const char* verso, int rank, int poi
         return req;
     }
 
-    sqlite3_bind_text(stmt, 1, recto, -1, SQLITE_STATIC);
-    sqlite3_bind_text(stmt, 2, verso, -1, SQLITE_STATIC);
-    sqlite3_bind_int(stmt, 3, rank);
-    sqlite3_bind_int(stmt, 4, points);
-    sqlite3_bind_int(stmt, 5, deck_id);
-    sqlite3_bind_int(stmt, 6, user_id);
+    sqlite3_bind_text(stmt, 1, Card->recto, -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 2, Card->verso, -1, SQLITE_STATIC);
+    sqlite3_bind_int(stmt, 3, Card->rank);
+    sqlite3_bind_int(stmt, 4, Card->points);
+    sqlite3_bind_int(stmt, 5, Card->deck_id);
+    sqlite3_bind_int(stmt, 6, Card->user_id);
 
     req = sqlite3_step(stmt);
     if (req != SQLITE_DONE) {
@@ -66,7 +69,7 @@ int addCard(sqlite3* db, const char* recto, const char* verso, int rank, int poi
 
 }
 
-int deleteCard(sqlite3* db, int card_id, int user_id) {
+int deleteCard(sqlite3* db, const struct card *Card,int card_id) {
     const char* sql = "DELETE FROM cards WHERE card_id = ? AND user_id = ?";
 
     sqlite3_stmt* stmt;
@@ -78,7 +81,7 @@ int deleteCard(sqlite3* db, int card_id, int user_id) {
     }
 
     sqlite3_bind_int(stmt, 1, card_id);
-    sqlite3_bind_int(stmt, 2, user_id);
+    sqlite3_bind_int(stmt, 2, Card->user_id);
 
     req = sqlite3_step(stmt);
     if(req != SQLITE_DONE) {

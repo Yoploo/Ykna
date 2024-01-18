@@ -5,8 +5,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sqlite3.h>
+#include "deck.h"
 
-int addDeck(sqlite3* db, const char* subject, const char* description, const char* tag, const char* status, int user_id) {
+int addDeck(sqlite3* db, const struct deck* Deck);
+int deleteDeck(sqlite3* db, const struct deck* Deck, int deck_id);
+
+int addDeck(sqlite3* db, const struct deck* Deck) {
     // Préparez la requête SQL avec des paramètres préparés
     const char* sql = "INSERT INTO decks (subject, description, tag, status, user_id) VALUES (?, ?, ?, ?, ?);";
 
@@ -20,11 +24,11 @@ int addDeck(sqlite3* db, const char* subject, const char* description, const cha
     }
 
     // Liez les valeurs aux paramètres préparés
-    sqlite3_bind_text(stmt, 1, subject, -1, SQLITE_STATIC);
-    sqlite3_bind_text(stmt, 2, description, -1, SQLITE_STATIC);
-    sqlite3_bind_text(stmt, 3, tag, -1, SQLITE_STATIC);
-    sqlite3_bind_text(stmt, 4, status, -1, SQLITE_STATIC);
-    sqlite3_bind_int(stmt, 5, user_id);
+    sqlite3_bind_text(stmt, 1, Deck->subject, -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 2, Deck->description, -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 3, Deck->tag, -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 4, Deck->status, -1, SQLITE_STATIC);
+    sqlite3_bind_int(stmt, 5, Deck->user_id);
 
     // Exécutez la requête préparée
     rc = sqlite3_step(stmt);
@@ -41,7 +45,7 @@ int addDeck(sqlite3* db, const char* subject, const char* description, const cha
     return 0;
 }
 
-int deleteDeck(sqlite3* db, int deck_id, int user_id) {
+int deleteDeck(sqlite3* db, const struct deck* Deck, int deck_id) {
     const char* sql = "DELETE FROM decks WHERE deck_id = ? AND user_id = ?";
 
     sqlite3_stmt* stmt;
@@ -54,7 +58,7 @@ int deleteDeck(sqlite3* db, int deck_id, int user_id) {
     }
 
     sqlite3_bind_int(stmt, 1, deck_id);
-    sqlite3_bind_int(stmt, 2, user_id);
+    sqlite3_bind_int(stmt, 2, Deck->user_id);
 
     req = sqlite3_step(stmt);
     if(req != SQLITE_DONE) {
@@ -74,4 +78,7 @@ int deleteDeck(sqlite3* db, int deck_id, int user_id) {
 
     return 0;
 
+}
+
+int editDeck(sqlite3* db, int deck_id, int user_id) {
 }

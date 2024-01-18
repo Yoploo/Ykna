@@ -33,7 +33,8 @@ CMakeFiles/Ykna.dir/Controller/card.c.obj: C:/Ykna/Controller/card.c \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
-  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Ykna/Controller/card.h
 
 CMakeFiles/Ykna.dir/Controller/deck.c.obj: C:/Ykna/Controller/deck.c \
   C:/msys64/mingw64/include/_mingw.h \
@@ -67,7 +68,8 @@ CMakeFiles/Ykna.dir/Controller/deck.c.obj: C:/Ykna/Controller/deck.c \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
-  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Ykna/Controller/deck.h
 
 CMakeFiles/Ykna.dir/View/main.cpp.obj: C:/Ykna/View/main.cpp \
   C:/Qt/6.6.1/mingw_64/include/QtCore/q20functional.h \
@@ -227,6 +229,8 @@ CMakeFiles/Ykna.dir/View/main.cpp.obj: C:/Ykna/View/main.cpp \
   C:/Qt/6.6.1/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.6.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.6.1/mingw_64/include/QtWidgets/qwidget.h \
+  C:/Ykna/Controller/card.h \
+  C:/Ykna/Controller/deck.h \
   C:/Ykna/database/createDatabase.h \
   C:/msys64/mingw64/include/_mingw.h \
   C:/msys64/mingw64/include/_mingw_mac.h \
@@ -571,14 +575,6 @@ C:/Qt/6.6.1/mingw_64/include/QtCore/qeventloop.h:
 
 C:/msys64/mingw64/include/malloc.h:
 
-C:/msys64/mingw64/include/c++/13.2.0/bits/predefined_ops.h:
-
-C:/Qt/6.6.1/mingw_64/include/QtCore/qswap.h:
-
-C:/msys64/mingw64/include/sdks/_mingw_ddk.h:
-
-C:/Qt/6.6.1/mingw_64/include/QtCore/qcoreapplication.h:
-
 C:/Qt/6.6.1/mingw_64/include/QtCore/q20functional.h:
 
 C:/Qt/6.6.1/mingw_64/include/QtCore/qbytearray.h:
@@ -592,6 +588,14 @@ C:/Qt/6.6.1/mingw_64/include/QtCore/qarraydataops.h:
 C:/Qt/6.6.1/mingw_64/include/QtCore/qflags.h:
 
 C:/msys64/mingw64/include/stdio.h:
+
+C:/msys64/mingw64/include/c++/13.2.0/bits/predefined_ops.h:
+
+C:/Qt/6.6.1/mingw_64/include/QtCore/qswap.h:
+
+C:/Qt/6.6.1/mingw_64/include/QtCore/qcoreapplication.h:
+
+C:/msys64/mingw64/include/sdks/_mingw_ddk.h:
 
 C:/msys64/mingw64/include/c++/13.2.0/bits/ptr_traits.h:
 
@@ -627,6 +631,10 @@ C:/Qt/6.6.1/mingw_64/include/QtGui/qwindowdefs.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h:
 
+C:/msys64/mingw64/include/c++/13.2.0/bits/allocated_ptr.h:
+
+C:/Ykna/Controller/card.h:
+
 C:/msys64/mingw64/include/c++/13.2.0/unordered_map:
 
 C:/msys64/mingw64/include/c++/13.2.0/bits/basic_string.h:
@@ -642,6 +650,12 @@ C:/msys64/mingw64/include/c++/13.2.0/debug/assertions.h:
 C:/msys64/mingw64/include/c++/13.2.0/cstddef:
 
 C:/Ykna/Controller/deck.c:
+
+C:/msys64/mingw64/include/c++/13.2.0/cctype:
+
+C:/msys64/mingw64/include/c++/13.2.0/bits/enable_special_members.h:
+
+C:/Ykna/Controller/deck.h:
 
 C:/Qt/6.6.1/mingw_64/include/QtCore/q20memory.h:
 
@@ -663,8 +677,6 @@ C:/Qt/6.6.1/mingw_64/include/QtCore/qtconfiginclude.h:
 
 C:/Qt/6.6.1/mingw_64/include/QtCore/qarraydatapointer.h:
 
-C:/Qt/6.6.1/mingw_64/include/QtCore/qcontiguouscache.h:
-
 C:/Qt/6.6.1/mingw_64/include/QtCore/qassert.h:
 
 C:/msys64/mingw64/include/c++/13.2.0/cstdio:
@@ -684,6 +696,8 @@ C:/Qt/6.6.1/mingw_64/include/QtCore/qbytearrayalgorithms.h:
 C:/Qt/6.6.1/mingw_64/include/QtCore/qfunctionaltools_impl.h:
 
 C:/Qt/6.6.1/mingw_64/include/QtCore/qbytearraylist.h:
+
+C:/Qt/6.6.1/mingw_64/include/QtCore/qcontiguouscache.h:
 
 C:/Qt/6.6.1/mingw_64/include/QtCore/qcoreapplication_platform.h:
 
@@ -971,8 +985,6 @@ C:/msys64/mingw64/include/c++/13.2.0/cwchar:
 
 C:/msys64/mingw64/include/c++/13.2.0/bits/alloc_traits.h:
 
-C:/msys64/mingw64/include/c++/13.2.0/bits/allocated_ptr.h:
-
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h:
 
 C:/msys64/mingw64/include/c++/13.2.0/bits/allocator.h:
@@ -996,10 +1008,6 @@ C:/msys64/mingw64/include/c++/13.2.0/bits/concept_check.h:
 C:/msys64/mingw64/include/c++/13.2.0/bits/cpp_type_traits.h:
 
 C:/msys64/mingw64/include/c++/13.2.0/bits/cxxabi_init_exception.h:
-
-C:/msys64/mingw64/include/c++/13.2.0/cctype:
-
-C:/msys64/mingw64/include/c++/13.2.0/bits/enable_special_members.h:
 
 C:/msys64/mingw64/include/c++/13.2.0/bits/exception.h:
 
